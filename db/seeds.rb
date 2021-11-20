@@ -51,3 +51,15 @@ courses = Course.create([
         name:"Computer Science and Engineering"
     }
 ])
+
+enrollments = Enrollment.create([
+    {
+        student: students.first,
+        course: courses.first
+    },
+
+    {
+        student: students.last,
+        course: courses.last
+    }
+])

@@ -1,7 +1,8 @@
 class Course < ApplicationRecord
     
 
-    has_many :students
+    has_many :enrollments
+    has_many :students, through: :enrollments
     after_create :slugify
 
     def slugify

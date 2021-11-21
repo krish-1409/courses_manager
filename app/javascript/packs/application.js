@@ -9,5 +9,5 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
 Rails.start()
-Turbolinks.start()
+// Turbolinks.start()   //Removing to avoid blank pages when we come back to previous page
 ActiveStorage.start()

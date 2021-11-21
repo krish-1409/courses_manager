@@ -13,23 +13,23 @@ students = Student.create([
     },
 
     {
-        name:"John Abraham",
-        age: 21
+        name:"Kim Jong Un",
+        age: 23
     },
 
     {
-        name:"John Abraham",
-        age: 21
+        name:"Donald Trump",
+        age: 43
     },
 
     {
-        name:"John Abraham",
-        age: 21
+        name:"Amit Kumar",
+        age: 27
     },
 
     {
-        name:"John Abraham",
-        age: 21
+        name:"Jeff Bezos",
+        age: 32
     },
 ])
 
@@ -40,15 +40,15 @@ courses = Course.create([
     },
 
     {
-        name:"Computer Science and Engineering"
+        name:"Electrical Engineering"
     },
 
     {
-        name:"Computer Science and Engineering"
+        name:"Electronics Engineering"
     },
 
     {
-        name:"Computer Science and Engineering"
+        name:"Mathematics"
     }
 ])
 

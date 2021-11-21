@@ -1,7 +1,8 @@
-import React from "react"
+import React, {useState, useEffect } from "react"
 
 const Student = () => {
-    return <div>This is Airlines#show view for our app.</div>
+    const []
+    return <div>This is student#show view for our app.</div>
 }
 
 export default Student

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Fragment} from "react"
 import axios from 'axios'
+import Student from './Student'
 
 const Students = () => {
     const [students, setStudents] = useState([])
@@ -16,17 +17,28 @@ const Students = () => {
     }, [students.length])
 
 
-    const list = students.map( item => {
-        return (<li key = {item.attributes.slug}>{item.attributes.name}</li>)
+    const grid = students.map( item => {
+        return (
+        <Student key = {item.attributes.slug}
+                 attributes={item.attributes}
+        />
+        )
     })
 
     return (
-        <Fragment>
-    <div>This is Airlines#index view for our app.</div>
+        <div className="home">
+            <div className="header">
+                <h1>Course Manager</h1>
+                <div className="subheader">An Application to manage your courses </div>
+            </div>
+        <div className="grid">
+    
+        </div>
+    
     <ul>
-        {list}
+    {grid}
     </ul>
-    </Fragment>
+    </div>
     
     )
 }

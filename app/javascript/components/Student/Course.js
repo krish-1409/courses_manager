@@ -23,17 +23,20 @@ const Enrolls = styled.div`
 
 
 const Course = (props) => {
-    
-    
-    const name = props.courseData[props.attributes.course_id][0]
-    const enrolls =  props.courseData[props.attributes.course_id][1] 
     console.log(props) 
+    if(props!=undefined){
+        console.log(props)
+    const name = props.courseData[props.attributes.course_id][0]
+    const enrolls =  props.courseData[props.attributes.course_id][1]
+     
+    
     return (
         <Card>
             <Coursename>{name}</Coursename>
             <Enrolls>Total Strength : <b>{enrolls}</b></Enrolls>
         </Card>
     )
+    }
 }
 
 export default Course

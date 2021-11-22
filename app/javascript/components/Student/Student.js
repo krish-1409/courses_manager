@@ -59,7 +59,9 @@ const Student = (props) => {
         console.log(student_id,enrollment)
         axios.post('/api/v1/enrollments',{student_id, enrollment})
         .then(resp =>{
-            debugger
+            const included = [...student.included, resp.data]
+            setStudent({...student, included})
+            setEnrollment({course_id: ''})
         })
 
     } 

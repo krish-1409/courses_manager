@@ -4,7 +4,7 @@ module Api
             protect_from_forgery with: :null_session
 
             def create
-                puts student
+               
                 enrollment = student.enrollments.new(enrollment_params)
                 if enrollment.save
                     render json: EnrollmentSerializer.new(enrollment).serialized_json
@@ -21,6 +21,8 @@ module Api
                     render json: {error: enrollment.errors.messages}, status: 422
                 end
             end
+
+          
             
             private
             def student

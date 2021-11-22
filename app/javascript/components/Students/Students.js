@@ -24,7 +24,7 @@ const Subheader = styled.div`
 
 `
 const Grid = styled.div`
- display grid;
+ display: grid;
  grid-template-columns: repeat(4, 1fr);
  grid-gap: 20px;
  width: 100%;

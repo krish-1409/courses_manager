@@ -46,6 +46,7 @@ module Api
             end
 
             private
+            
 
             def student_params
                 params.require(:student).permit(:name,:age)

@@ -31,6 +31,8 @@ const Course = (props) => {
         loaded = false
         console.log(props)
         if(typeof props === 'undefined'){
+            location.reload()
+        }
     const name = props.courseData[props.attributes.course_id][0]
     const enrolls =  props.courseData[props.attributes.course_id][1]
      
@@ -41,8 +43,8 @@ const Course = (props) => {
             <Enrolls>Total Strength : <b>{enrolls}</b></Enrolls>
         </Card>
     )
-        }
-        location.reload()
+        
+        
     }
 }
 

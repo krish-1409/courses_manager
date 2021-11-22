@@ -2,6 +2,11 @@ module Api
     module V1
         class EnrollmentsController < ApplicationController
             protect_from_forgery with: :null_session
+            def index
+                enrollments = Enrollment.all
+
+                render json: EnrollmentSerializer.new(enrollments, options).serialized_json
+            end
 
             def create
                

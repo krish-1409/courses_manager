@@ -2,7 +2,7 @@ import React, {useState, useEffect, Fragment } from "react"
 import axios from "axios"
 import Header from "./Header"
 import styled from "styled-components"
-import AddCourseForm from "./addCourseForm"
+import AddDelCourseForm from "./addCourseForm"
 import Course from './Course'
 
 const Grid = styled.div`
@@ -42,6 +42,7 @@ const Main = styled.div`
 const Student = (props) => {
     const [student, setStudent] = useState({})
     const [enrollment, setEnrollment] = useState({})
+    const [delEnrollment, destroyEnrollment] = useState({})
     const [loaded,setLoaded] = useState(false)
     const [courses,setCourses] = useState([])
 
@@ -76,7 +77,7 @@ const Student = (props) => {
 
     const handleChange = (e) => {
         e.preventDefault()
-
+        
         setEnrollment(Object.assign({}, enrollment, {[e.target.name]: e.target.value}))
         // console.log('enrollment:',enrollment)
 
@@ -98,6 +99,44 @@ const Student = (props) => {
         })
         location.reload()
     }
+
+
+    const handleChangeDel = (e) => {
+        e.preventDefault()
+        console.log(e.target.value)
+        destroyEnrollment(Object.assign({}, delEnrollment, {[e.target.name]: e.target.value}))
+        
+
+    }
+
+    const handleSubmitDel = (e) => {
+        e.preventDefault()
+
+        const csrfToken = document.querySelector('[name=csrf-token]').content
+        axios.defaults.headers.common['X-CSRF-TOKEN'] = csrfToken
+
+        const student_id = student.data.id
+        console.log(student,delEnrollment)
+        let enroll_id = 0
+        for(let i=0;i<student.included.length;i++){
+            if(student.included[i].attributes.course_id==delEnrollment.course_id){
+                enroll_id = student.included[i].id
+                break
+            }
+        }
+        const url = '/api/v1/enrollments/' + enroll_id
+
+        axios.delete(url)
+        .then(resp =>{
+            console.log(resp)
+        })
+        location.reload()
+    }
+
+
+
+
+
     let enrollments
     if (loaded && student.included) { 
         enrollments = student.included.map( (item, index) => {
@@ -128,12 +167,16 @@ const Student = (props) => {
             </Column>
             <Column>
 
-            <AddCourseForm
+            <AddDelCourseForm
                 handleChange = {handleChange}
                 handleSubmit = {handleSubmit}
+                handleChangeDel = {handleChangeDel}
+                handleSubmitDel = {handleSubmitDel}
                 attributes = {student.data.attributes}
                 enrollments = {enrollment}
+    
             />
+
 
             </Column>
             </Fragment>

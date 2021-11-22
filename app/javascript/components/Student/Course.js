@@ -26,10 +26,10 @@ const Enrolls = styled.div`
 const Course = (props) => {
     
 
-    console.log(props) 
+    // console.log(props) 
     
         // loaded = false
-        console.log(props)
+        // console.log(props)
         if(typeof props === 'undefined'){
             location.reload()
         }

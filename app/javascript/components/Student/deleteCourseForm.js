@@ -56,12 +56,7 @@ const Headline = styled.div`
 
 `
 
-const SubForms = styled.div`
-    margin-top: 50px;
-    padding-bottom: 100px;
-`
-
-const AddDelCourseForm = (props) => {
+const AddCourseForm = (props) => {
     const [courses, setCourses] = useState([])
     const [addedCourses, getCourse] = useState([])
 
@@ -127,7 +122,6 @@ const AddDelCourseForm = (props) => {
 
     return (
         <Wrapper>
-            <SubForms>
             <form action="" onSubmit={props.handleSubmit}>
                 <Headline>Wish to add a new Course for {props.attributes.name} ? </Headline>
                 <div>Choose From Below Available Courses</div>
@@ -143,27 +137,8 @@ const AddDelCourseForm = (props) => {
                 <SubmitBtn type="submit">Add Course</SubmitBtn>
                 </div>
             </form>
-            </SubForms>
-
-            <SubForms>
-            <form action="" onSubmit={props.handleSubmitDel}>
-                <Headline>Wish to Delete a Course in {props.attributes.name}'s Enrollments ? </Headline>
-                <div>Choose From Below Available Courses</div>
-                <Field>
-                    <div className="add-cource-text"></div>
-                    
-                    <select onChange = {props.handleChangeDel} name="course_id" id="newCourse">
-                        <option value="none" selected disabled hidden>Select a Course</option>
-                        {Dellist}
-                    </select>
-                </Field>
-                <div>
-                <SubmitBtn type="submit">Delete Course</SubmitBtn>
-                </div>
-            </form>
-            </SubForms>
         </Wrapper>
     )
 }
 
-export default AddDelCourseForm
+export default AddCourseForm

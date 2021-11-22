@@ -24,7 +24,7 @@ const Enrolls = styled.div`
 
 const Course = (props) => {
     console.log(props) 
-    if(props!=undefined){
+    if(props!='undefined'){
         console.log(props)
     const name = props.courseData[props.attributes.course_id][0]
     const enrolls =  props.courseData[props.attributes.course_id][1]

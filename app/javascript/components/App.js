@@ -2,6 +2,7 @@ import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Students from './Students/Students'
 import Student from './Student/Student'
+import addCourse from './addForm/addCourse'
 
 
 const App =() => {
@@ -11,6 +12,7 @@ const App =() => {
     <Switch>
             <Route exact path="/" component={Students} />
             <Route exact path="/students/:slug" component={Student} />
+            <Route exact path="/addCourseForm" component = {addCourse} />
     </Switch>
     )
 }

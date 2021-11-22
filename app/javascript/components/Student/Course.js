@@ -42,6 +42,7 @@ const Course = (props) => {
         </Card>
     )
         }
+        location.reload()
     }
 }
 

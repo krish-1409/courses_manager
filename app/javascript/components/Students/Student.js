@@ -23,12 +23,14 @@ const StudentImage = styled.div`
 `
 const StudentName = styled.div`
     padding: 20px 0 10px 0;
+    font-weight: bold;
 `
 const StudentAge = styled.div`
 padding: 10px 0 10px 0;
 `
 const StudentCourses = styled.div`
 padding: 10px 0 10px 0;
+
 `
 
 const StudentLink = styled.div`
@@ -57,7 +59,7 @@ const  Student = (props) =>{
             </StudentImage>
             <StudentName>{props.attributes.name}</StudentName>
             <StudentAge>Age: {props.attributes.age}</StudentAge>
-            <StudentCourses>Courses Registered: {props.attributes.total_courses}</StudentCourses>
+            <StudentCourses>Courses Registered: <b>{props.attributes.total_courses}</b></StudentCourses>
             <StudentLink>
                 <Link to={`/students/${props.attributes.slug}`}  >  View Courses </Link>
             </StudentLink>

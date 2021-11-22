@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import styled from "styled-components";
 import axios from "axios";
 
@@ -11,6 +11,8 @@ const Wrapper = styled.div`
         font-weight: 100;
         padding: 0;
     }
+    
+  
 `
 const Field = styled.div`
     padding: 10px;
@@ -45,6 +47,7 @@ const Btn = styled.a`
 
 const addCourse = () => {
     const [newCourse,setNewCourse] = useState({})
+    const [courses, setCourses] = useState({})
 
     const handleChange = (e) => {
         e.preventDefault()
@@ -63,9 +66,16 @@ const addCourse = () => {
             debugger
         })
         .catch(resp => console.log(resp.data))
-
-
     }
+
+    useEffect(()=> {
+        
+
+        axios.get('/api/v1/courses.json')
+        .then(resp => setCourses(resp.data.data))
+        .catch( resp => console.log(resp) )
+    }, [courses.length])
+
 
 
     return(
@@ -73,6 +83,7 @@ const addCourse = () => {
             <h2>Enter a new Course Name to Add</h2>
             <h5>*There may be multiple courses with same name.</h5>
             <h5>(Duplication not considered.)</h5>
+            <h4>Total Courses Available: {courses.length}</h4>
             <form action="">
                 <Field>
                     

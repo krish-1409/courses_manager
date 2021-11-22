@@ -53,9 +53,15 @@ const AddLink = styled.div`
 
 `
 
+const Info = styled.div`
+    font-size: 18px;
+    margin: 20px;
+
+`
+
 const Students = () => {
     const [students, setStudents] = useState([])
-
+    
     useEffect(()=> {
         //obtain data of students from api
         //use sate is used to update as we add new students
@@ -85,6 +91,10 @@ const Students = () => {
                     <Link to={`/addStudentForm`}  >  Add Students</Link>
                 </AddLink>
                 </div>
+                <Info>
+                    <div>Total Students : <b>{students.length}</b></div>
+                    
+                </Info>
             </Header>
         <Grid>
         {grid}

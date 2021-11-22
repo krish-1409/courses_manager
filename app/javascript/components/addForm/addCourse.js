@@ -28,7 +28,18 @@ const AddBtn = styled.button`
     font-size: 20px;
     box-shadow: 0 8px 6px -6px black;
 `
+const Btn = styled.a`
+    text-decoration: none;
+   Button{
+    font-size: 20px;
+    box-shadow: 0 8px 6px -6px black;
+    margin: 30px;
+    width: 150px;
+    height: 35px;
 
+   }
+    
+`
 
 
 
@@ -71,7 +82,8 @@ const addCourse = () => {
             <AddBtn type="submit" onClick={handleSubmit} >Add Course</AddBtn>
             </Field>
             </form>
-
+            <Btn href={`/`}  >  <button>Home</button> </Btn>
+                    <Btn href={`/addStudentForm`}  >  <button>Add Students</button> </Btn>
 
         </Wrapper>
     )

@@ -4,6 +4,8 @@ import styled from "styled-components";
 const Wrapper = styled.div`
     padding: 10px 100px 50px 0;
     font-size: 25px;
+    
+
     img{
         height:60px;
         width: 60px;

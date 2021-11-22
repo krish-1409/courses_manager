@@ -46,6 +46,8 @@ const StudentLink = styled.div`
     }
 `
 
+
+
 const  Student = (props) =>{
     return (
         <Card>
@@ -56,7 +58,7 @@ const  Student = (props) =>{
             <StudentAge>Age: {props.attributes.age}</StudentAge>
             <StudentCourses>Courses Registered: {props.attributes.total_courses}</StudentCourses>
             <StudentLink>
-                <Link to={`/students/${props.attributes.slug}`} >  View Courses </Link>
+                <Link to={`/students/${props.attributes.slug}`}  >  View Courses </Link>
             </StudentLink>
         </Card>
     )

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useState } from "react";
 
 const Card = styled.div`
     border: 1px solid rgba(0,0,0,0.1);
@@ -23,8 +24,11 @@ const Enrolls = styled.div`
 
 
 const Course = (props) => {
+    let loaded = true
+
     console.log(props) 
-    if(props!='undefined'){
+    if(loaded){
+        loaded = false
         console.log(props)
     const name = props.courseData[props.attributes.course_id][0]
     const enrolls =  props.courseData[props.attributes.course_id][1]

@@ -24,11 +24,11 @@ const Enrolls = styled.div`
 
 
 const Course = (props) => {
-    let loaded = true
+    
 
     console.log(props) 
-    if(loaded){
-        loaded = false
+    
+        // loaded = false
         console.log(props)
         if(typeof props === 'undefined'){
             location.reload()
@@ -46,6 +46,6 @@ const Course = (props) => {
         
         
     }
-}
+
 
 export default Course

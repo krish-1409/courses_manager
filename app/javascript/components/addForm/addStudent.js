@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
+import { useState } from "react";
 import axios from "axios";
-
 
 const Wrapper = styled.div`
     text-align: center;
@@ -29,46 +29,47 @@ const AddBtn = styled.button`
     box-shadow: 0 8px 6px -6px black;
 `
 
-
-
-
-const addCourse = () => {
-    const [newCourse,setNewCourse] = useState({})
+const addStudent = () => {
+    const [newStudent, setStudent] = useState({})
 
     const handleChange = (e) => {
         e.preventDefault()
-        setNewCourse(Object.assign({},newCourse,{name: e.target.value}))
-        console.log(newCourse)
+        setStudent(Object.assign({},newStudent,{[e.target.name]: e.target.value}))
+        console.log(newStudent)
     }
 
     const handleSubmit = (e) => {
         const csrfToken = document.querySelector('[name=csrf-token]').content
         axios.defaults.headers.common['X-CSRF-TOKEN'] = csrfToken
 
-        axios.post('/api/v1/courses',newCourse)
+        axios.post('/api/v1/students',newStudent)
         .then(resp => {
             console.log(resp)
-            alert(newCourse.name+' Added as a course') 
-            debugger
+            alert(newStudent.name+' Added as a student') 
+            
         })
         .catch(resp => console.log(resp.data))
 
 
     }
 
-
+        
     return(
         <Wrapper>
             <h2>Enter a new Course Name to Add</h2>
-            <h5>*There may be multiple courses with same name.</h5>
+            <h5>*There may be multiple Students with same name.</h5>
             <h5>(Duplication not considered.)</h5>
             <form action="">
                 <Field>
                     
-                    <input type="text" placeholder="Enter Course Name" onChange = {handleChange}/>
+                    <input type="text" placeholder="Enter New Student Name" onChange = {handleChange} name = "name" />
+                </Field>
+                <Field>
+                    
+                    <input type="text" placeholder="Enter age of new Student" onChange = {handleChange} name="age"/>
                 </Field>
             <Field>
-            <AddBtn type="submit" onClick={handleSubmit} >Add Course</AddBtn>
+            <AddBtn type="submit" onClick={handleSubmit}>Add Student</AddBtn>
             </Field>
             </form>
 
@@ -77,7 +78,4 @@ const addCourse = () => {
     )
 }
 
-
-
-
-export default addCourse
+export default addStudent

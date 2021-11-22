@@ -8,7 +8,8 @@ const Home = styled.div`
     text-align: center;
     max-width: 1200px;
     margin-left: auto;
-    margin-righ: auto;
+    margin-right: 100px;
+    overflow-x:hidden;
 `
 const Header = styled.div`
     padding: 100px 100px 10x 100px;
@@ -40,7 +41,7 @@ const AddLink = styled.div`
     a{
         color: #fff;
         background: #000;
-        border-radius: 4px;
+        border-radius: 8px;
         padding: 10px;
         border: 1px solid #000;
         width: 100%;

@@ -78,7 +78,7 @@ const Student = (props) => {
         e.preventDefault()
 
         setEnrollment(Object.assign({}, enrollment, {[e.target.name]: e.target.value}))
-        console.log('enrollment:',enrollment)
+        // console.log('enrollment:',enrollment)
 
     }
 
@@ -89,7 +89,7 @@ const Student = (props) => {
         axios.defaults.headers.common['X-CSRF-TOKEN'] = csrfToken
 
         const student_id = student.data.id
-        console.log(student_id,enrollment)
+        // console.log(student_id,enrollment)
         axios.post('/api/v1/enrollments',{student_id, enrollment})
         .then(resp =>{
             const included = [...student.included, resp.data.data]

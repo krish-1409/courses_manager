@@ -30,6 +30,7 @@ const Course = (props) => {
     if(loaded){
         loaded = false
         console.log(props)
+        if(typeof props === 'undefined'){
     const name = props.courseData[props.attributes.course_id][0]
     const enrolls =  props.courseData[props.attributes.course_id][1]
      
@@ -40,6 +41,7 @@ const Course = (props) => {
             <Enrolls>Total Strength : <b>{enrolls}</b></Enrolls>
         </Card>
     )
+        }
     }
 }
 

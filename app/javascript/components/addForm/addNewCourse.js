@@ -113,7 +113,7 @@ const addNewCourse = () => {
         .catch( resp => console.log(resp) )
     }, [courses.length])
 
-    
+
     
     //Below part of code is used to store those courses with zero enrollments as [coursename, slug]
     const delCourseList = []
@@ -154,6 +154,8 @@ const addNewCourse = () => {
             </form>
         </div>
         
+        {/* deletetion form starts here */}
+
         <div>
             <h2>Select a Course to delete it permanently</h2>
             <h5>*Only the courses with zero enrollments will be available to choose</h5>

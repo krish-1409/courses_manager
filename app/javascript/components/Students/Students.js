@@ -87,8 +87,8 @@ const Students = () => {
                 <Subheader>An Application to manage your courses.</Subheader>
                 <div className="Buttons">
                 <AddLink>
-                    <Link to={`/addCourseForm`}  >  Add Courses </Link>
-                    <Link to={`/addStudentForm`}  >  Add Students</Link>
+                    <Link to={`/addCourseForm`}  >  Add/ Delete Courses </Link>
+                    <Link to={`/addStudentForm`}  >  Add/ Delete Students</Link>
                 </AddLink>
                 </div>
                 <Info>

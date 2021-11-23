@@ -5,6 +5,9 @@ import styled from "styled-components"
 import AddDelCourseForm from "./addDelCourseForm"
 import Course from './Course'
 
+
+
+
 const Grid = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -135,8 +138,8 @@ const Student = (props) => {
 
 
 
-
-
+    
+    
     let enrollments
     if (loaded && student.included) { 
         enrollments = student.included.map( (item, index) => {

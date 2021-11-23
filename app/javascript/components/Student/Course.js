@@ -25,17 +25,19 @@ const Enrolls = styled.div`
 
 const Course = (props) => {
 
-//     constructor(props){
-//         super(props);
-//         this.state = {
-//           data: []
-//         }
-//       }
+        //     constructor(props){
+        //         super(props);
+        //         this.state = {
+        //           data: []
+        //         }
+        //       }
 
     // console.log(props) 
     
         // loaded = false
         // console.log(props)
+
+        
         if(typeof props === 'undefined'){
             location.reload()
         }

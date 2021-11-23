@@ -15,7 +15,7 @@ const Header = styled.div`
     padding: 100px 100px 10x 100px;
 
     h1{
-        font-size: 42px;
+        font-size: 35px;
     }
 
 `
@@ -84,6 +84,7 @@ const Students = () => {
         <Home>
             <Header>
                 <h1>Course Manager</h1>
+                <Link to={`https://github.com/krish-1409/courses_manager.git`} >Git Hub Repo</Link>
                 <Subheader>An Application to manage your courses.</Subheader>
                 <div className="Buttons">
                 <AddLink>

@@ -87,7 +87,7 @@ const addNewCourse = () => {
             <form action="">
                 <Field>
                     
-                    <input type="text" placeholder="Enter Course Name" onChange = {handleChange}/>
+                    <input type="text" placeholder="Enter Course Name" onChange = {handleChange} required/>
                 </Field>
             <Field>
             <AddBtn type="submit" onClick={handleSubmit} >Add Course</AddBtn>

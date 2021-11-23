@@ -78,11 +78,11 @@ const addNewStudent = () => {
             <form action="">
                 <Field>
                     
-                    <input type="text" placeholder="Enter New Student Name" onChange = {handleChange} name = "name" />
+                    <input type="text" placeholder="Enter New Student Name" onChange = {handleChange} name = "name" required/>
                 </Field>
                 <Field>
                     
-                    <input type="text" placeholder="Enter age of new Student" onChange = {handleChange} name="age"/>
+                    <input type="number" placeholder="Enter age of new Student" onChange = {handleChange} name="age" required/>
                 </Field>
             <Field>
             <AddBtn type="submit" onClick={handleSubmit}>Add Student</AddBtn>

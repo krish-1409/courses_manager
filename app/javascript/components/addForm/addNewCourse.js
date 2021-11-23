@@ -51,7 +51,7 @@ const addNewCourse = () => {
 
     const handleChange = (e) => {
         e.preventDefault()
-        setNewCourse(Object.assign({},newCourse,{name: e.target.value}))
+        setNewCourse(Object.assign({},newCourse,{name: e.target.value[0].toUpperCase()+e.target.value.slice(1)}))
         console.log(newCourse)
     }
 

@@ -24,7 +24,13 @@ const Enrolls = styled.div`
 
 
 const Course = (props) => {
-    
+
+//     constructor(props){
+//         super(props);
+//         this.state = {
+//           data: []
+//         }
+//       }
 
     // console.log(props) 
     
@@ -33,6 +39,8 @@ const Course = (props) => {
         if(typeof props === 'undefined'){
             location.reload()
         }
+        
+
     const name = props.courseData[props.attributes.course_id][0]
     const enrolls =  props.courseData[props.attributes.course_id][1]
      

@@ -2,7 +2,7 @@ import React, {useState, useEffect, Fragment } from "react"
 import axios from "axios"
 import Header from "./Header"
 import styled from "styled-components"
-import AddDelCourseForm from "./addCourseForm"
+import AddDelCourseForm from "./addDelCourseForm"
 import Course from './Course'
 
 const Grid = styled.div`

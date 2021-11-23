@@ -140,7 +140,7 @@ const AddDelCourseForm = (props) => {
                     </select>
                 </Field>
                 <div>
-                <SubmitBtn type="submit">Add Course</SubmitBtn>
+                <SubmitBtn type="submit">Add Enrollemnt</SubmitBtn>
                 </div>
             </form>
             </SubForms>
@@ -158,7 +158,7 @@ const AddDelCourseForm = (props) => {
                     </select>
                 </Field>
                 <div>
-                <SubmitBtn type="submit">Delete Course</SubmitBtn>
+                <SubmitBtn type="submit">Delete Enrollment</SubmitBtn>
                 </div>
             </form>
             </SubForms>

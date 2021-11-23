@@ -125,6 +125,8 @@ const addNewStudent = () => {
             <option value={item[1]} name={item[0]}>{item[0]}</option>
         )
     })
+    console.log(students[1])
+
     return(
         <Wrapper>
 
@@ -178,7 +180,7 @@ const addNewStudent = () => {
             
         </Grid>
                     
-                    
+                 
         </Wrapper>
     )
 }

@@ -41,7 +41,8 @@ const StudentLink = styled.div`
         color: #fff;
         background: #000;
         border-radius: 4px;
-        padding: 10px 50px;
+    
+        padding: 4% 10%;
         border: 1px solid #000;
         width: 100%;
         text-decoration: none;

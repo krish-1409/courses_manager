@@ -46,7 +46,7 @@ const AddLink = styled.div`
         border: 1px solid #000;
         width: 100%;
         text-decoration: none;
-        margin: 20px;
+        margin: 5px;
 
     }
   

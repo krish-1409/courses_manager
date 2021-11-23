@@ -95,6 +95,7 @@ const Students = () => {
                     <div>Total Students : <b>{students.length}</b></div>
                     
                 </Info>
+                Refer To The ReadMe File for details: <a href="https://github.com/krish-1409/courses_manager/blob/master/README.md" target="_blank"> Click Here..!</a>
             </Header>
         <Grid>
         {grid}

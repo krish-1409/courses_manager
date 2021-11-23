@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 
 const Home = styled.div`
     text-align: center;
-    max-width: 85%;
+    max-width: 90%;
     margin-left: auto;
     margin-right: 100px;
     overflow-x:hidden;

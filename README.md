@@ -1,24 +1,28 @@
-# README
+<h1 align="center">Welcome to Course Manager 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
+</p>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> This web application helps user to keep track of students and courses in which they have been registered.
 
-Things you may want to cover:
+### 🏠 [Homepage](https://courses--manager.herokuapp.com)
 
-* Ruby version
+## Install
 
-* System dependencies
+```sh
+yarn install
+```
 
-* Configuration
+## Author
 
-* Database creation
+👤 **Sai Krishna Lanka**
 
-* Database initialization
+* Github: [@krish-1409](https://github.com/krish-1409)
+* LinkedIn: [@www.linkedin.com\/in\/lanka-sai-krishna](https://linkedin.com/in/www.linkedin.com\/in\/lanka-sai-krishna)
 
-* How to run the test suite
+## Show your support
 
-* Services (job queues, cache servers, search engines, etc.)
+Give a ⭐️ if this project helped you!
 
-* Deployment instructions
-
-* ...
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

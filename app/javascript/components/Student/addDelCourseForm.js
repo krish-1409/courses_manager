@@ -115,13 +115,13 @@ const AddDelCourseForm = (props) => {
 
     const Addlist = courseData[0].map( item=> {
         return (
-            <option value={item[1]}>{item[0]}</option>
+            <option value={item[1]}>{item[0]} (Course Id:{item[1]})</option>
         )
     })
 
     const Dellist = courseData[1].map( item=> {
         return (
-            <option value={item[1]}>{item[0]}</option>
+            <option value={item[1]}>{item[0]} (Course Id:{item[1]})</option>
         )
     })
 

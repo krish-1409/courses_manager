@@ -126,7 +126,7 @@ const addNewCourse = () => {
     //Used to create options for dropdown using del list
     const delCourseListOptions = delCourseList.map(item => {
         return (
-            <option value={item[1]}>{item[0]}</option>
+            <option value={item[1]}>{item[0]} (Course Id: {item[1]})</option>
         )
     })
 

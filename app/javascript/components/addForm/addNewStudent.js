@@ -126,10 +126,10 @@ const addNewStudent = () => {
     //Used to create options for dropdown using del list
     const delStudentsListOptions = delStudentsList.map(item => {
         return(
-            <option value={item[1]} name={item[0]}>{item[0]}</option>
+            <option value={item[1]} name={item[0]}>{item[0]} (Student Id: {item[1]})</option>
         )
     })
-    console.log(students[1])
+    // console.log(students[1])
 
     return(
         <Wrapper>

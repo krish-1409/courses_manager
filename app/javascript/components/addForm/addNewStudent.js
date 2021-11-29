@@ -69,7 +69,7 @@ const addNewStudent = () => {
     const handleSubmit = (e) => {
         const csrfToken = document.querySelector('[name=csrf-token]').content
         axios.defaults.headers.common['X-CSRF-TOKEN'] = csrfToken
-
+        if(newStudent.age>0){
         axios.post('/api/v1/students',newStudent)  //new student is a json object which is to be passed with arugemnt name to add a new student
         .then(resp => {
             console.log(resp)
@@ -77,6 +77,10 @@ const addNewStudent = () => {
             
         })
         .catch(resp => console.log(resp.data))
+    }
+
+    else
+        alert("invalid age")
 
 
     }
@@ -146,7 +150,7 @@ const addNewStudent = () => {
                 </Field>
                 <Field>
                     
-                    <input type="number" placeholder="Enter age of new Student" onChange = {handleChange} name="age" required/>
+                    <input type="number" min="0" placeholder="Enter age of new Student" onChange = {handleChange} name="age" required/>
                 </Field>
             <Field>
             <AddBtn type="submit" onClick={handleSubmit}>Add Student</AddBtn>

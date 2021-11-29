@@ -129,7 +129,7 @@ const addNewStudent = () => {
             <option value={item[1]} name={item[0]}>{item[0]} (Student Id: {item[1]})</option>
         )
     })
-    // console.log(students[1])
+    
 
     return(
         <Wrapper>

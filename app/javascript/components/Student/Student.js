@@ -59,12 +59,12 @@ const Student = (props) => {
         },[courses.length])
 
     const courseMap = {}
-    // console.log(courses)
+    
     for(let i=0;i<courses.length;i++){
         // courseMap.set(courses[i].id,courses[i].attributes.name)
         courseMap[courses[i].id] =  [courses[i].attributes.name,courses[i].relationships.enrollments.data.length]
     }
-    // console.log(courseMap)
+    
 
     useEffect(() => {
         const slug = props.match.params.slug
